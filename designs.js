@@ -29,10 +29,14 @@ buttn.click(function(event) {
     let rows = inputRows.val();
     let cols = inputCols.val();
     // do not allow rows or cols over 50
-    if (rows > 50)
+    if (rows > 50) {
         rows = 50;
-    if (cols > 50)
+        inputRows.val(50);
+    }
+    if (cols > 50) {
         cols = 50;
+        inputCols.val(50);
+    }
     // make the grid
     makeGrid(rows,cols);
 });
