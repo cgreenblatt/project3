@@ -1,3 +1,4 @@
+const MAX = 50;
 const pixelCanvas = $(' #pixel_canvas ' );
 
 // Use delegation to implement event handlers for <td> elements
@@ -29,13 +30,13 @@ buttn.click(function(event) {
     let rows = inputRows.val();
     let cols = inputCols.val();
     // do not allow rows or cols over 50
-    if (rows > 50) {
-        rows = 50;
-        inputRows.val(50);
+    if (rows > MAX) {
+        rows = MAX;
+        inputRows.val(MAX);
     }
-    if (cols > 50) {
-        cols = 50;
-        inputCols.val(50);
+    if (cols > MAX) {
+        cols = MAX;
+        inputCols.val(MAX);
     }
     // make the grid
     makeGrid(rows,cols);
